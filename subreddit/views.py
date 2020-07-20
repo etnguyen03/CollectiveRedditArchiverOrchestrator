@@ -16,10 +16,3 @@ def subreddit_info(request, subreddit=""):
         "percent_complete": (sub.total_tasks / sub.completed_tasks) * 100 if sub.completed_tasks != 0 else 0,
     }
     return render(request, "r/index.html", context=context)
-
-def index(request):
-    subreddit_list = Subreddit.objects.all()
-    context = {
-        "subreddit_list": subreddit_list
-    }
-    return render(request, "index.html", context=context)

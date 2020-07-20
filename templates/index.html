@@ -1,0 +1,23 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<p>Reddit is killing subs. That is bad. We archive those subs.</p>
+
+<p>List of subs thus far:</p>
+<ul>
+    {% for sub in subreddit_list %}
+        <li><a href="r/{{ sub.name }}">{{ sub.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<h3>Want to help?</h3>
+<p>There are not that many requirements.</p>
+<ul>
+    <li>A machine with Docker installed</li>
+    <li>At least 1 GiB of space allocatable to the instance for temporary storage</li>
+    <li>A fast internet connection with appropriate bandwidth</li>
+</ul>
+
+<p>To get started, you will need to create an account <a href="/register">here</a>.</p>
+<p>Alternatively, if you already have an account, login <a href="/login">here</a>.</p>
+{% endblock %}
