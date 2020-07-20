@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p>There are a total of {{ total_tasks }} task{{ total_tasks|pluralize }}, and {{ completed_tasks }} task{{ completed_tasks|pluralize }} have been completed.</p>
+    <p>That's {{ percent_complete }}% complete.</p>
+</body>
+</html>
