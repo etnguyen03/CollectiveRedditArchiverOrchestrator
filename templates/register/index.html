@@ -1,0 +1,11 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+    <h2>Register</h2>
+    <p>You must create one account per person. Each worker gets their own token which is created later.</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign up</button>
+    </form>
+{% endblock %}

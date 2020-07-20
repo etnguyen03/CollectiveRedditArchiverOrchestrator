@@ -36,6 +36,8 @@ class Worker(models.Model):
     profile = models.ManyToManyField(User)
     ip = models.GenericIPAddressField()
     create_time = models.DateTimeField(auto_now_add=True)
+    working = models.BooleanField(default=False)
+    last_update = models.DateTimeField(auto_now=True)
 
 
 class Task(models.Model):
