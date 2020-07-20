@@ -1,0 +1,17 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+    <h2>Hello {{ username }}</h2>
+    <a href="/logout">Logout</a>
+    <h3>Your Workers</h3>
+    <a href="/ucp/register">Register a new worker</a>
+    {% if worker_list|length > 0 %}
+    <ul>
+        {% for worker in worker_list %}
+            <li><a href="/ucp/worker/{{ worker.id }}">{{ worker.id }} : {{ worker.ip }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>You have no workers registered.</p>
+    {% endif %}
+{% endblock %}

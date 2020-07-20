@@ -1,0 +1,11 @@
+{% extends "templates/base.html" %}
+
+{% block title %}Worker Details{% endblock %}
+
+{% block content %}
+    <h2>Worker {{ worker_id }}</h2>
+    <p>IP Address: {{ worker_ip }}</p>
+    <p>Working: {{ worker_working }}</p>
+
+    <p>There is no edit function on workers. If there is a need to edit your workers, simply <a href="/ucp/register">make a new one</a>.</p>
+{% endblock %}
